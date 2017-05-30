@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -8- coding:utf-8 -*-
 # __author__ = 'Tomking'
 
 import os

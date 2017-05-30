@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-
+# __author__ = 'Tomking'
 
 from lib.core import Download, UrlManager, plugin
 import threading
 from urllib.parse import urljoin
 from bs4 import BeautifulSoup
-from script import sqlcheck
+from script import sql_check
 
 class SpiderMain(object):
     """
