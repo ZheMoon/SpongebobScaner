@@ -2,7 +2,7 @@ import re, random
 from lib.core import Download
 
 
-class Spider(object):
+class spider(object):
     """
     sql注入插件
     """
@@ -36,7 +36,6 @@ class Spider(object):
         _content = Downloader.get(_url)
         for (dbms, regex) in ((dbms, regex) for dbms in DBMS_ERRORS for regex in DBMS_ERRORS[dbms]):
             if (re.search(regex, _content)):
-                print("True")
                 return True
         content = {}
         content['origin'] = Downloader.get(_url)

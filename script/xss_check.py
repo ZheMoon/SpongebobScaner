@@ -7,7 +7,6 @@ import sys, os
 
 payload = []
 filename = os.path.join(sys.path[0], 'fuzz', 'xss_payload.txt')
-#filename = '/Users/jinzhelei/Documents/code/SpongebobScaner/fuzz/xss_payload.txt'
 with open(filename) as f:
     for i in f:
         payload.append(i.strip())
