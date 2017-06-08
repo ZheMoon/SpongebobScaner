@@ -2,6 +2,8 @@
 # -*- coding:utf-8 -*-
 # __author__ = 'Tomking'
 
+import socket
+from urllib.parse import urlparse
 
 def urlsplit(url):
     if url is None:
@@ -17,3 +19,11 @@ def urlsplit(url):
         new_url = domain + '?' + _url.replace(val,'my_Payload')
         urls.append(new_url)
     return urls
+
+
+def gethostbyname(url):
+    domain = urlparse(url)
+    if domain.netloc is None:
+        return None
+    ip = socket.gethostbyname(domain.netloc)
+    return ip
